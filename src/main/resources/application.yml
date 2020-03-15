@@ -1,0 +1,42 @@
+pessoa:
+  nome: "Bruno"
+  nome2: 'Brunão'
+  nome3: Bruninho
+  idade: 25
+  idade2: !!float 25 #vai fazer esse valor virar float
+  idade3: !!str 3.5 #vai fazer o valor se renderizar para um string
+  peso: 74.5
+  poder: 2e+10
+  value: null
+  #id: *nome #pega o valor da chave nome
+
+
+  curteMusica: true
+  dataNascimento: 1994-03-28 12:30:22
+  filhos: #lista com objetos primitivos
+    - Carlos
+    - João
+    - Maria
+  filmesFavoritos: ["Lord of the rings","Joker"] #outra forma de declarar uma lista com objetos primitivos
+  amigos: #lista complexa com diferentes formas de declarar objetos
+    #
+    - {name: "Antonio", idade: 25, tatoo: true}
+    -
+      name: "Jonas"
+      idade: 22
+      tatoo: false
+  descricao: > #o sinal de maior diz para o yml ler o codigo como se fosse uma unica linha
+    asejasklejaskljeaskeasklejaskelas
+    pasoekaspokeasopkeopaskeaskopkeasoeas
+    apsokeasopkeopasoepaskoepsakoepasopeas
+    asçlekaslekaslçeasklçeasklçeasklç
+  signature: | #Quando colocar a | o formato do texto vai ser preservado
+    Hey
+    You
+    Hey You
+  base: &base
+    var1: value1
+  foo:
+    <<: *base #to pegando o valor de base e colocando dentro de foo
+
+
